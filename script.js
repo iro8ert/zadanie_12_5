@@ -4,14 +4,14 @@ var prefix = "https://cors-anywhere.herokuapp.com/";
 
 function getQuote() {
 
-	$.getJSON(prefix + quoteURL, createTweet);
+	$.getJSON(prefix + quoteUrl, createTweet);
 	
 }
 
 function createTweet(input) {
 	var data = input[0];
 	var quoteText = $(data.content).text().trim();
-	var quoteAuthot = data.title;
+	var quoteAuthor = data.title;
 
 	if (!quoteAuthor.length) {
 		quoteAuthor = "Unknown author";
